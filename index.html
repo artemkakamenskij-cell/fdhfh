@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Открой Оренбуржье — платформа о достопримечательностях Оренбургской области: фото, координаты, описания от местных жителей.">
+  <title>Открой Оренбуржье — главная</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== ШАПКА / НАВИГАЦИЯ ===================== -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <!-- Бургер (только мобилка, чистый CSS через :checked) -->
+      <input type="checkbox" id="burger-toggle" class="burger-toggle" aria-label="Открыть меню">
+      <label for="burger-toggle" class="burger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <a href="index.html" class="logo" id="logo">
+        <span class="logo-mark" aria-hidden="true">О</span>
+        Открой&nbsp;<span>Оренбуржье</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="#search-section" id="go-to-search">Поиск достопримечательностей</a>
+        <a href="login.html"    id="nav-login">Войти</a>
+        <a href="register.html" id="nav-register">Регистрация</a>
+        <a href="profile.html"  id="nav-profile">Личный кабинет</a>
+        <a href="catalog.html"  id="nav-catalog">Каталог достопримечательностей</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO / БЫСТРЫЙ ПОИСК ===================== -->
+    <section class="hero" id="search-section">
+      <div class="hero-inner">
+        <h1>Откройте для себя Оренбуржье</h1>
+        <p class="hero-sub">
+          Собираем достопримечательности региона вместе: фотографии, точные координаты
+          и подробные описания от местных жителей и путешественников.
+        </p>
+
+        <form class="search-form" action="catalog.html" method="get" role="search">
+          <label for="search-input" class="visually-hidden">Поиск по категориям</label>
+          <input
+            id="search-input"
+            name="q"
+            type="search"
+            list="search-suggestions"
+            placeholder="Например: Памятники архитектуры, Природные объекты, Музеи"
+            autocomplete="off">
+          <datalist id="search-suggestions">
+            <option value="Памятники архитектуры">
+            <option value="Природные объекты">
+            <option value="Музеи">
+            <option value="Исторические места">
+          </datalist>
+          <button id="search-button" class="btn btn-primary" type="submit">Найти</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================== ПРЕИМУЩЕСТВА ===================== -->
+    <section class="section advantages" id="advantages-section">
+      <h2 class="section-title">Почему у нас удобно</h2>
+      <div class="advantages-grid">
+
+        <article class="advantage">
+          <div class="adv-icon" aria-hidden="true">
+            <!-- иконка «фото/загрузка» -->
+            <svg viewBox="0 0 24 24" width="32" height="32">
+              <path d="M4 5h16v14H4z" fill="none" stroke="currentColor" stroke-width="1.7"/>
+              <path d="M7 14l3-3 3 3 2-2 3 3" fill="none" stroke="currentColor" stroke-width="1.7"/>
+              <circle cx="9" cy="9" r="1.4" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Удобная загрузка фотографий</h3>
+          <p>Несколько изображений к каждой точке в пару кликов.</p>
+        </article>
+
+        <article class="advantage">
+          <div class="adv-icon" aria-hidden="true">
+            <!-- иконка «карта/координаты» -->
+            <svg viewBox="0 0 24 24" width="32" height="32">
+              <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"
+                    fill="none" stroke="currentColor" stroke-width="1.7"/>
+              <circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+            </svg>
+          </div>
+          <h3>Точные координаты на карте</h3>
+          <p>Широта и долгота — чтобы не потерять место в пути.</p>
+        </article>
+
+        <article class="advantage">
+          <div class="adv-icon" aria-hidden="true">
+            <!-- иконка «люди» -->
+            <svg viewBox="0 0 24 24" width="32" height="32">
+              <circle cx="9" cy="9" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/>
+              <path d="M3.5 19c.7-3 3-4.6 5.5-4.6S13.8 16 14.5 19"
+                    fill="none" stroke="currentColor" stroke-width="1.7"/>
+              <circle cx="17" cy="9.5" r="2.3" fill="none" stroke="currentColor" stroke-width="1.7"/>
+              <path d="M15 14.6c2.2 0 4.3 1.4 5 4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+            </svg>
+          </div>
+          <h3>Подробные описания от местных</h3>
+          <p>Истории, детали и советы от краеведов региона.</p>
+        </article>
+
+        <article class="advantage">
+          <div class="adv-icon" aria-hidden="true">
+            <!-- иконка «отзывы/звезда» -->
+            <svg viewBox="0 0 24 24" width="32" height="32">
+              <path d="M12 3.6l2.5 5.1 5.6.8-4 3.9.9 5.6L12 16.4l-5 2.6.9-5.6-4-3.9 5.6-.8z"
+                    fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Актуальная информация и отзывы</h3>
+          <p>Рейтинги и впечатления путешественников.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== ПОПУЛЯРНЫЕ (5 КАРТОЧЕК) ===================== -->
+    <section class="section" id="popular-section">
+      <div class="section-head">
+        <h2 class="section-title">Популярные достопримечательности</h2>
+        <a class="link-more" href="catalog.html">Весь каталог →</a>
+      </div>
+
+      <div class="popular-grid">
+
+        <!-- Карточка 1 -->
+        <article class="landmark-card">
+          <div class="cover cover-1" aria-hidden="true"></div>
+          <div class="card-body">
+            <span class="cat">Природный объект</span>
+            <h3><a href="landmark.html">Соль-Илецкие озёра</a></h3>
+            <p class="meta">Автор: Иван Петров</p>
+            <p class="rating" aria-label="Рейтинг 5 из 5">
+              <span class="stars">★★★★★</span>
+              <span class="rating-count">(128)</span>
+            </p>
+            <p class="meta coords">51.1630° с. ш., 54.9928° в. д.</p>
+            <p class="meta">Район: Соль-Илецкий</p>
+            <p class="meta">Фотографий: 4</p>
+            <a class="btn btn-ghost btn-block" href="landmark.html">Подробнее</a>
+          </div>
+        </article>
+
+        <!-- Карточка 2 -->
+        <article class="landmark-card">
+          <div class="cover cover-2" aria-hidden="true"></div>
+          <div class="card-body">
+            <span class="cat">Памятник архитектуры</span>
+            <h3><a href="landmark.html">Караван-Сарай</a></h3>
+            <p class="meta">Автор: Мария Иванова</p>
+            <p class="rating" aria-label="Рейтинг 4 из 5">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-count">(74)</span>
+            </p>
+            <p class="meta coords">51.7729° с. ш., 55.0988° в. д.</p>
+            <p class="meta">Район: г. Оренбург</p>
+            <p class="meta">Фотографий: 6</p>
+            <a class="btn btn-ghost btn-block" href="landmark.html">Подробнее</a>
+          </div>
+        </article>
+
+        <!-- Карточка 3 -->
+        <article class="landmark-card">
+          <div class="cover cover-3" aria-hidden="true"></div>
+          <div class="card-body">
+            <span class="cat">Музей</span>
+            <h3><a href="landmark.html">Оренбургский краеведческий музей</a></h3>
+            <p class="meta">Автор: Иван Петров</p>
+            <p class="rating" aria-label="Рейтинг 5 из 5">
+              <span class="stars">★★★★★</span>
+              <span class="rating-count">(56)</span>
+            </p>
+            <p class="meta coords">51.7682° с. ш., 55.0964° в. д.</p>
+            <p class="meta">Район: г. Оренбург</p>
+            <p class="meta">Фотографий: 3</p>
+            <a class="btn btn-ghost btn-block" href="landmark.html">Подробнее</a>
+          </div>
+        </article>
+
+        <!-- Карточка 4 -->
+        <article class="landmark-card">
+          <div class="cover cover-4" aria-hidden="true"></div>
+          <div class="card-body">
+            <span class="cat">Историческое место</span>
+            <h3><a href="landmark.html">Саракташские святыни</a></h3>
+            <p class="meta">Автор: Ольга Сидорова</p>
+            <p class="rating" aria-label="Рейтинг 4 из 5">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-count">(41)</span>
+            </p>
+            <p class="meta coords">51.7891° с. ш., 56.3562° в. д.</p>
+            <p class="meta">Район: Саракташский</p>
+            <p class="meta">Фотографий: 5</p>
+            <a class="btn btn-ghost btn-block" href="landmark.html">Подробнее</a>
+          </div>
+        </article>
+
+        <!-- Карточка 5 -->
+        <article class="landmark-card">
+          <div class="cover cover-5" aria-hidden="true"></div>
+          <div class="card-body">
+            <span class="cat">Природный объект</span>
+            <h3><a href="landmark.html">Бузулукский бор</a></h3>
+            <p class="meta">Автор: Сергей Кузнецов</p>
+            <p class="rating" aria-label="Рейтинг 5 из 5">
+              <span class="stars">★★★★★</span>
+              <span class="rating-count">(93)</span>
+            </p>
+            <p class="meta coords">52.7821° с. ш., 52.2684° в. д.</p>
+            <p class="meta">Район: Бузулукский</p>
+            <p class="meta">Фотографий: 8</p>
+            <a class="btn btn-ghost btn-block" href="landmark.html">Подробнее</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== CSS-СЛАЙДЕР ===================== -->
+    <section class="section" id="slider-section">
+      <h2 class="section-title">Красоты Оренбуржья</h2>
+
+      <div class="slider">
+
+        <!-- 4 радио = 4 слайда. :checked управляет видимостью и точками-индикаторами -->
+        <input type="radio" name="slide" id="slide-1" class="slide-input" checked>
+        <input type="radio" name="slide" id="slide-2" class="slide-input">
+        <input type="radio" name="slide" id="slide-3" class="slide-input">
+        <input type="radio" name="slide" id="slide-4" class="slide-input">
+
+        <div class="slides">
+          <figure class="slide slide-a">
+            <figcaption>
+              <h3>Соль-Илецкие озёра</h3>
+              <p>Солёные и грязевые озёра — место силы и отдыха в Соль-Илецком районе.</p>
+            </figcaption>
+          </figure>
+          <figure class="slide slide-b">
+            <figcaption>
+              <h3>Караван-Сарай</h3>
+              <p>Историко-архитектурный комплекс XIX века — один из символов Оренбурга.</p>
+            </figcaption>
+          </figure>
+          <figure class="slide slide-c">
+            <figcaption>
+              <h3>Бузулукский бор</h3>
+              <p>Крупнейший лесной массив степной зоны — реликтовый сосновый бор.</p>
+            </figcaption>
+          </figure>
+          <figure class="slide slide-d">
+            <figcaption>
+              <h3>Саракташские святыни</h3>
+              <p>Духовные и исторические места Саракташского района Оренбуржья.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Индикаторы (точки). Клик по label переключает радио -->
+        <div class="slider-indicators" id="slider-indicators">
+          <label for="slide-1" class="dot dot-1" title="Слайд 1"></label>
+          <label for="slide-2" class="dot dot-2" title="Слайд 2"></label>
+          <label for="slide-3" class="dot dot-3" title="Слайд 3"></label>
+          <label for="slide-4" class="dot dot-4" title="Слайд 4"></label>
+        </div>
+
+        <!-- Стрелки «Назад/Вперёд» тоже через label на соседние радио -->
+        <label for="slide-4" class="slider-arrow arrow-prev" aria-label="Предыдущий слайд">‹</label>
+        <label for="slide-2" class="slider-arrow arrow-next" aria-label="Следующий слайд">›</label>
+      </div>
+    </section>
+
+    <!-- ===================== ПАРТНЁРЫ ===================== -->
+    <section class="section partners" id="partners-section">
+      <h2 class="section-title">Наши партнёры</h2>
+      <div class="partners-grid">
+        <div class="partner-logo"><span>Министерство культуры Оренбургской области</span></div>
+        <div class="partner-logo"><span>Оренбургский краеведческий музей</span></div>
+        <div class="partner-logo"><span>Администрация г. Оренбурга</span></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== ПОДВАЛ ===================== -->
+  <footer id="footer" class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-col">
+        <h3>Открой Оренбуржье</h3>
+        <p>Платформа о достопримечательностях Оренбургской области.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Контакты</h3>
+        <p><a href="tel:88007654321">8-800-765-43-21</a></p>
+        <p><a href="mailto:info@orenlandmarks.ru">info@orenlandmarks.ru</a></p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Навигация</h3>
+        <ul class="footer-nav">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="login.html">Вход</a></li>
+          <li><a href="register.html">Регистрация</a></li>
+          <li><a href="profile.html">Личный кабинет</a></li>
+          <li><a href="catalog.html">Каталог достопримечательностей</a></li>
+          <li><a href="landmark.html">Страница достопримечательности</a></li>
+          <li><a href="admin.html">Административная панель</a></li>
+          <li><a href="index_dark.html">Главная — тёмная тема</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <p class="footer-copy">© 2026 «Открой Оренбуржье». Все права защищены.</p>
+  </footer>
+
+</body>
+</html>

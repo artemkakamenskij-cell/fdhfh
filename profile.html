@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный кабинет — Открой Оренбуржье</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">Открой <span>Оренбуржье</span></div>
+      <nav class="header-nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="admin.html">Админ-панель</a>
+        <a href="login.html">Выйти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page" id="profile-page">
+    <h1 class="page-title">Личный кабинет</h1>
+
+    <div class="profile-grid">
+      <section class="card user-info" id="user-info">
+        <h3>Информация о пользователе</h3>
+        <dl>
+          <dt>E-mail</dt><dd>ivan.petrov@example.com</dd>
+          <dt>Имя</dt><dd>Иван</dd>
+          <dt>Фамилия</dt><dd>Петров</dd>
+          <dt>Дата рождения</dt><dd>12.03.1995</dd>
+          <dt>Телефон</dt><dd>+7 (999) 123-45-67</dd>
+        </dl>
+      </section>
+
+      <section class="card">
+        <h3>Мои достопримечательности</h3>
+        <div class="my-list" id="my-landmarks">
+          <a class="my-item" href="landmark.html">
+            <div class="thumb" aria-hidden="true"></div>
+            <div>
+              <h4>Соль-Илецкие озёра</h4>
+              <p class="meta">Природный объект · Соль-Илецкий район</p>
+              <span class="badge approved">Одобрено</span>
+            </div>
+          </a>
+          <a class="my-item" href="landmark.html">
+            <div class="thumb" aria-hidden="true"></div>
+            <div>
+              <h4>Оренбургский краеведческий музей</h4>
+              <p class="meta">Музей · г. Оренбург</p>
+              <span class="badge pending">На модерации</span>
+            </div>
+          </a>
+          <a class="my-item" href="landmark.html">
+            <div class="thumb" aria-hidden="true"></div>
+            <div>
+              <h4>Караван-Сарай</h4>
+              <p class="meta">Памятник архитектуры · г. Оренбург</p>
+              <span class="badge approved">Одобрено</span>
+            </div>
+          </a>
+        </div>
+        <p style="margin-top:16px;">
+          <a class="btn btn-primary" href="catalog.html">Добавить достопримечательность</a>
+        </p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

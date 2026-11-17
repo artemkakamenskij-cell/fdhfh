@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог — Открой Оренбуржье</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">Открой <span>Оренбуржье</span></div>
+      <nav class="header-nav">
+        <a href="index.html">Главная</a>
+        <a href="profile.html">Личный кабинет</a>
+        <a href="admin.html">Админ-панель</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1 class="page-title">Каталог достопримечательностей</h1>
+
+    <form class="filters" action="catalog.html" method="get">
+      <input type="search" name="q" placeholder="Поиск по названию…">
+      <select name="category">
+        <option value="">Все категории</option>
+        <option>Памятник архитектуры</option>
+        <option>Природный объект</option>
+        <option>Музей</option>
+        <option>Историческое место</option>
+      </select>
+      <select name="district">
+        <option value="">Все районы</option>
+        <option>г. Оренбург</option>
+        <option>Соль-Илецкий</option>
+        <option>Бузулукский</option>
+        <option>Оренбургский</option>
+      </select>
+      <button class="btn btn-primary" type="submit">Найти</button>
+    </form>
+
+    <div class="catalog-grid">
+      <article class="landmark-card">
+        <div class="cover"></div>
+        <div class="body">
+          <span class="cat">Природный объект</span>
+          <h3><a href="landmark.html">Соль-Илецкие озёра</a></h3>
+          <p class="meta">Иван Петров · ★★★★★ (128) · 4 фото</p>
+          <p class="meta">Соль-Илецкий район</p>
+          <a class="btn btn-ghost" href="landmark.html">Подробнее</a>
+        </div>
+      </article>
+
+      <article class="landmark-card">
+        <div class="cover"></div>
+        <div class="body">
+          <span class="cat">Памятник архитектуры</span>
+          <h3><a href="landmark.html">Караван-Сарай</a></h3>
+          <p class="meta">Мария Иванова · ★★★★☆ (74) · 6 фото</p>
+          <p class="meta">г. Оренбург</p>
+          <a class="btn btn-ghost" href="landmark.html">Подробнее</a>
+        </div>
+      </article>
+
+      <article class="landmark-card">
+        <div class="cover"></div>
+        <div class="body">
+          <span class="cat">Музей</span>
+          <h3><a href="landmark.html">Краеведческий музей</a></h3>
+          <p class="meta">Иван Петров · ★★★★★ (56) · 3 фото</p>
+          <p class="meta">г. Оренбург</p>
+          <a class="btn btn-ghost" href="landmark.html">Подробнее</a>
+        </div>
+      </article>
+
+      <article class="landmark-card">
+        <div class="cover"></div>
+        <div class="body">
+          <span class="cat">Историческое место</span>
+          <h3><a href="landmark.html">Саракташские святыни</a></h3>
+          <p class="meta">Ольга Сидорова · ★★★★☆ (41) · 5 фото</p>
+          <p class="meta">Саракташский район</p>
+          <a class="btn btn-ghost" href="landmark.html">Подробнее</a>
+        </div>
+      </article>
+    </div>
+  </main>
+</body>
+</html>

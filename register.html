@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация — Открой Оренбуржье</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">Открой <span>Оренбуржье</span></div>
+      <nav class="header-nav">
+        <a href="catalog.html">Каталог</a>
+        <a href="login.html">Вход</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <form class="form-card" id="register-form" action="login.html" method="get" style="max-width:560px;">
+      <h2>Регистрация</h2>
+
+      <div class="field">
+        <label for="reg-email">E-mail</label>
+        <input id="reg-email" name="email" type="email" placeholder="you@example.com" required>
+        <p class="hint valid">E-mail указан корректно</p>
+        <p class="hint invalid">Введите корректный e-mail</p>
+      </div>
+
+      <div class="field">
+        <label for="reg-lastname">Фамилия</label>
+        <input id="reg-lastname" name="lastname" type="text" placeholder="Петров" required>
+        <p class="hint valid">✓</p>
+        <p class="hint invalid">Обязательное поле</p>
+      </div>
+
+      <div class="field">
+        <label for="reg-firstname">Имя</label>
+        <input id="reg-firstname" name="firstname" type="text" placeholder="Иван" required>
+        <p class="hint valid">✓</p>
+        <p class="hint invalid">Обязательное поле</p>
+      </div>
+
+      <div class="field">
+        <label for="reg-password">Пароль</label>
+        <input id="reg-password" name="password" type="password" placeholder="Минимум 8 символов" minlength="8" required>
+        <p class="hint valid">Пароль достаточной длины</p>
+        <p class="hint invalid">Пароль должен быть не короче 8 символов</p>
+      </div>
+
+      <div class="field">
+        <label for="reg-password-confirm">Повтор пароля</label>
+        <input id="reg-password-confirm" name="password_confirm" type="password" placeholder="Повторите пароль" minlength="8" required>
+        <p class="hint valid">✓</p>
+        <p class="hint invalid">Обязательное поле</p>
+      </div>
+
+      <div class="field">
+        <label for="reg-birthdate">Дата рождения <span class="optional">(необязательно)</span></label>
+        <input id="reg-birthdate" name="birthdate" type="date">
+      </div>
+
+      <div class="field">
+        <label for="reg-phone">Телефон <span class="optional">(необязательно)</span></label>
+        <input id="reg-phone" name="phone" type="tel" placeholder="+7 (999) 123-45-67">
+      </div>
+
+      <div class="field checkbox-row">
+        <input id="reg-consent" name="consent" type="checkbox" required>
+        <label for="reg-consent" style="margin:0;font-weight:400;">
+          Согласен на обработку персональных данных
+        </label>
+      </div>
+
+      <button type="submit" id="reg-submit" class="btn btn-primary btn-block">Зарегистрироваться</button>
+
+      <p style="margin-top:14px;text-align:center;font-size:14px;">
+        Уже есть аккаунт? <a href="login.html">Войти</a>
+      </p>
+    </form>
+  </main>
+</body>
+</html>
